@@ -113,6 +113,7 @@ void pressShortcuts(int num, char key) {
   }
 }
 
+static int count = 0;
 void parsing() {
   if (serial.available()) {
     Parser data(serial.buf, ',');  // отдаём парсеру
@@ -170,7 +171,8 @@ void parsing() {
         break;
     } 
 
-    sendDataToEEPROM();
+    if (count % 48 == 0) sendDataToEEPROM();
+    ++count;
   }
 }
 
