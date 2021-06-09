@@ -19,10 +19,11 @@
 
 
 При созданной папке .git:
-1. git status
-2. git pull origin main
-3. git status
-4. git add -A
-5. git status
-6. git commit -m "something"
-7. git push origin main
+1. cd "C:\Users\13211\Desktop\Qt Designer and Python 3.9"
+2. git status
+3. git pull origin main
+4. git status
+5. git add -A
+6. git status
+7. git commit -m "something"
+8. git push origin main
