@@ -33,7 +33,7 @@ static byte banners[][4] = {
   { _3, 0x40, 0x40, 0x40 },     //       (2)
 };
 
-static byte* shortcutsKeys[][16][3] = {
+static byte* shortcutsKeys[3][16][3] = {
   { {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, 
     {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, 
     {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, 
@@ -109,66 +109,173 @@ void pressShortcuts(int num, char key) {
   }
 }
 
-static int count = 0;
+// 
 void parsing() {
   if (serial.available()) {
     Parser data(serial.buf, ',');  // отдаём парсеру
     int ints[10];           // массив для данных
     data.parseInts(ints);   // парсим в него
 
-    switch ((char)ints[1]) {
+    switch ((char)ints[0]) {
       case '1': 
-        shortcutsKeys[ints[0]-(int)'1'][0][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][0][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][0][2] = ints[4]; 
+        switch ((char)ints[1]) {
+          case '1': 
+            shortcutsKeys[0][0][0] = ints[2]; shortcutsKeys[0][0][1] = ints[3]; shortcutsKeys[0][0][2] = ints[4]; 
+            break;
+          case '2': 
+            shortcutsKeys[0][1][0] = ints[2]; shortcutsKeys[0][1][1] = ints[3]; shortcutsKeys[0][1][2] = ints[4]; 
+            break;
+          case '3': 
+            shortcutsKeys[0][2][0] = ints[2]; shortcutsKeys[0][2][1] = ints[3]; shortcutsKeys[0][2][2] = ints[4]; 
+            break;
+          case 'A':  
+            shortcutsKeys[0][3][0] = ints[2]; shortcutsKeys[0][3][1] = ints[3]; shortcutsKeys[0][3][2] = ints[4]; 
+            break;
+          case '4':  
+            shortcutsKeys[0][4][0] = ints[2]; shortcutsKeys[0][4][1] = ints[3]; shortcutsKeys[0][4][2] = ints[4]; 
+            break;
+          case '5':
+            shortcutsKeys[0][5][0] = ints[2]; shortcutsKeys[0][5][1] = ints[3]; shortcutsKeys[0][5][2] = ints[4]; 
+            break;
+          case '6':  
+            shortcutsKeys[0][6][0] = ints[2]; shortcutsKeys[0][6][1] = ints[3]; shortcutsKeys[0][6][2] = ints[4]; 
+            break;
+          case 'B':  
+            shortcutsKeys[0][7][0] = ints[2]; shortcutsKeys[0][7][1] = ints[3]; shortcutsKeys[0][7][2] = ints[4]; 
+            break;
+          case '7':  
+            shortcutsKeys[0][8][0] = ints[2]; shortcutsKeys[0][8][1] = ints[3]; shortcutsKeys[0][8][2] = ints[4]; 
+            break;
+          case '8':
+            shortcutsKeys[0][9][0] = ints[2]; shortcutsKeys[0][9][1] = ints[3]; shortcutsKeys[0][9][2] = ints[4]; 
+            break;
+          case '9':  
+            shortcutsKeys[0][10][0] = ints[2]; shortcutsKeys[0][10][1] = ints[3]; shortcutsKeys[0][10][2] = ints[4]; 
+            break;
+          case 'C': 
+            shortcutsKeys[0][11][0] = ints[2]; shortcutsKeys[0][11][1] = ints[3]; shortcutsKeys[0][11][2] = ints[4]; 
+            break;
+          case '*': 
+            shortcutsKeys[0][12][0] = ints[2]; shortcutsKeys[0][12][1] = ints[3]; shortcutsKeys[0][12][2] = ints[4]; 
+            break;
+          case '0':  
+            shortcutsKeys[0][13][0] = ints[2]; shortcutsKeys[0][13][1] = ints[3]; shortcutsKeys[0][13][2] = ints[4]; 
+            break;
+          case '#': 
+            shortcutsKeys[0][14][0] = ints[2]; shortcutsKeys[0][14][1] = ints[3]; shortcutsKeys[0][14][2] = ints[4]; 
+            break;
+          case 'D': 
+            shortcutsKeys[0][15][0] = ints[2]; shortcutsKeys[0][15][1] = ints[3]; shortcutsKeys[0][15][2] = ints[4]; 
+            break;
+        } 
         break;
       case '2': 
-        shortcutsKeys[ints[0]-(int)'1'][1][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][1][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][1][2] = ints[4]; 
+        switch ((char)ints[1]) {
+          case '1': 
+            shortcutsKeys[1][0][0] = ints[2]; shortcutsKeys[1][0][1] = ints[3]; shortcutsKeys[1][0][2] = ints[4]; 
+            break;
+          case '2': 
+            shortcutsKeys[1][1][0] = ints[2]; shortcutsKeys[1][1][1] = ints[3]; shortcutsKeys[1][1][2] = ints[4]; 
+            break;
+          case '3': 
+            shortcutsKeys[1][2][0] = ints[2]; shortcutsKeys[1][2][1] = ints[3]; shortcutsKeys[1][2][2] = ints[4]; 
+            break;
+          case 'A':  
+            shortcutsKeys[1][3][0] = ints[2]; shortcutsKeys[1][3][1] = ints[3]; shortcutsKeys[1][3][2] = ints[4]; 
+            break;
+          case '4':  
+            shortcutsKeys[1][4][0] = ints[2]; shortcutsKeys[1][4][1] = ints[3]; shortcutsKeys[1][4][2] = ints[4]; 
+            break;
+          case '5':
+            shortcutsKeys[1][5][0] = ints[2]; shortcutsKeys[1][5][1] = ints[3]; shortcutsKeys[1][5][2] = ints[4]; 
+            break;
+          case '6':  
+            shortcutsKeys[1][6][0] = ints[2]; shortcutsKeys[1][6][1] = ints[3]; shortcutsKeys[1][6][2] = ints[4]; 
+            break;
+          case 'B':  
+            shortcutsKeys[1][7][0] = ints[2]; shortcutsKeys[1][7][1] = ints[3]; shortcutsKeys[1][7][2] = ints[4]; 
+            break;
+          case '7':  
+            shortcutsKeys[1][8][0] = ints[2]; shortcutsKeys[1][8][1] = ints[3]; shortcutsKeys[1][8][2] = ints[4]; 
+            break;
+          case '8':
+            shortcutsKeys[1][9][0] = ints[2]; shortcutsKeys[1][9][1] = ints[3]; shortcutsKeys[1][9][2] = ints[4]; 
+            break;
+          case '9':  
+            shortcutsKeys[1][10][0] = ints[2]; shortcutsKeys[1][10][1] = ints[3]; shortcutsKeys[1][10][2] = ints[4]; 
+            break;
+          case 'C': 
+            shortcutsKeys[1][11][0] = ints[2]; shortcutsKeys[1][11][1] = ints[3]; shortcutsKeys[1][11][2] = ints[4]; 
+            break;
+          case '*': 
+            shortcutsKeys[1][12][0] = ints[2]; shortcutsKeys[1][12][1] = ints[3]; shortcutsKeys[1][12][2] = ints[4]; 
+            break;
+          case '0':  
+            shortcutsKeys[1][13][0] = ints[2]; shortcutsKeys[1][13][1] = ints[3]; shortcutsKeys[1][13][2] = ints[4]; 
+            break;
+          case '#': 
+            shortcutsKeys[1][14][0] = ints[2]; shortcutsKeys[1][14][1] = ints[3]; shortcutsKeys[1][14][2] = ints[4]; 
+            break;
+          case 'D': 
+            shortcutsKeys[1][15][0] = ints[2]; shortcutsKeys[1][15][1] = ints[3]; shortcutsKeys[1][15][2] = ints[4]; 
+            break;
+        } 
         break;
-      case '3': 
-        shortcutsKeys[ints[0]-(int)'1'][2][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][2][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][2][2] = ints[4]; 
+      case '3':
+        switch ((char)ints[1]) {
+          case '1': 
+            shortcutsKeys[2][0][0] = ints[2]; shortcutsKeys[2][0][1] = ints[3]; shortcutsKeys[2][0][2] = ints[4]; 
+            break;
+          case '2': 
+            shortcutsKeys[2][1][0] = ints[2]; shortcutsKeys[2][1][1] = ints[3]; shortcutsKeys[2][1][2] = ints[4]; 
+            break;
+          case '3': 
+            shortcutsKeys[2][2][0] = ints[2]; shortcutsKeys[2][2][1] = ints[3]; shortcutsKeys[2][2][2] = ints[4]; 
+            break;
+          case 'A':  
+            shortcutsKeys[2][3][0] = ints[2]; shortcutsKeys[2][3][1] = ints[3]; shortcutsKeys[2][3][2] = ints[4]; 
+            break;
+          case '4':  
+            shortcutsKeys[2][4][0] = ints[2]; shortcutsKeys[2][4][1] = ints[3]; shortcutsKeys[2][4][2] = ints[4]; 
+            break;
+          case '5':
+            shortcutsKeys[2][5][0] = ints[2]; shortcutsKeys[2][5][1] = ints[3]; shortcutsKeys[2][5][2] = ints[4]; 
+            break;
+          case '6':  
+            shortcutsKeys[2][6][0] = ints[2]; shortcutsKeys[2][6][1] = ints[3]; shortcutsKeys[2][6][2] = ints[4]; 
+            break;
+          case 'B':  
+            shortcutsKeys[2][7][0] = ints[2]; shortcutsKeys[2][7][1] = ints[3]; shortcutsKeys[2][7][2] = ints[4]; 
+            break;
+          case '7':  
+            shortcutsKeys[2][8][0] = ints[2]; shortcutsKeys[2][8][1] = ints[3]; shortcutsKeys[2][8][2] = ints[4]; 
+            break;
+          case '8':
+            shortcutsKeys[2][9][0] = ints[2]; shortcutsKeys[2][9][1] = ints[3]; shortcutsKeys[2][9][2] = ints[4]; 
+            break;
+          case '9':  
+            shortcutsKeys[2][10][0] = ints[2]; shortcutsKeys[2][10][1] = ints[3]; shortcutsKeys[2][10][2] = ints[4]; 
+            break;
+          case 'C': 
+            shortcutsKeys[2][11][0] = ints[2]; shortcutsKeys[2][11][1] = ints[3]; shortcutsKeys[2][11][2] = ints[4]; 
+            break;
+          case '*': 
+            shortcutsKeys[2][12][0] = ints[2]; shortcutsKeys[2][12][1] = ints[3]; shortcutsKeys[2][12][2] = ints[4]; 
+            break;
+          case '0':  
+            shortcutsKeys[2][13][0] = ints[2]; shortcutsKeys[2][13][1] = ints[3]; shortcutsKeys[2][13][2] = ints[4]; 
+            break;
+          case '#': 
+            shortcutsKeys[2][14][0] = ints[2]; shortcutsKeys[2][14][1] = ints[3]; shortcutsKeys[2][14][2] = ints[4]; 
+            break;
+          case 'D': 
+            shortcutsKeys[2][15][0] = ints[2]; shortcutsKeys[2][15][1] = ints[3]; shortcutsKeys[2][15][2] = ints[4]; 
+            break;
+        }  
         break;
-      case 'A':  
-        shortcutsKeys[ints[0]-(int)'1'][3][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][3][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][3][2] = ints[4]; 
-        break;
-      case '4':  
-        shortcutsKeys[ints[0]-(int)'1'][4][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][4][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][4][2] = ints[4]; 
-        break;
-      case '5':
-        shortcutsKeys[ints[0]-(int)'1'][5][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][5][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][5][2] = ints[4]; 
-        break;
-      case '6':  
-        shortcutsKeys[ints[0]-(int)'1'][6][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][6][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][6][2] = ints[4]; 
-        break;
-      case 'B':  
-        shortcutsKeys[ints[0]-(int)'1'][7][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][7][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][7][2] = ints[4]; 
-        break;
-      case '7':  
-        shortcutsKeys[ints[0]-(int)'1'][8][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][8][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][8][2] = ints[4]; 
-        break;
-      case '8':
-        shortcutsKeys[ints[0]-(int)'1'][9][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][9][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][9][2] = ints[4]; 
-        break;
-      case '9':  
-        shortcutsKeys[ints[0]-(int)'1'][10][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][10][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][10][2] = ints[4]; 
-        break;
-      case 'C': 
-        shortcutsKeys[ints[0]-(int)'1'][11][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][11][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][11][2] = ints[4]; 
-        break;
-      case '*': 
-        shortcutsKeys[ints[0]-(int)'1'][12][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][12][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][12][2] = ints[4]; 
-        break;
-      case '0':  
-        shortcutsKeys[ints[0]-(int)'1'][13][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][13][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][13][2] = ints[4]; 
-        break;
-      case '#': 
-        shortcutsKeys[ints[0]-(int)'1'][14][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][14][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][14][2] = ints[4]; 
-        break;
-      case 'D': 
-        shortcutsKeys[ints[0]-(int)'1'][15][0] = ints[2]; shortcutsKeys[ints[0]-(int)'1'][15][1] = ints[3]; shortcutsKeys[ints[0]-(int)'1'][15][2] = ints[4]; 
-        break;
-    } 
+    }
 
-    if (count % 48 == 0) sendDataToEEPROM();
-    ++count;
+    sendDataToEEPROM();
   }
 }
 
