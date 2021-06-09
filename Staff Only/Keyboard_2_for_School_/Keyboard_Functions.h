@@ -52,12 +52,8 @@ static byte* shortcutsKeys[][16][3] = {
 /* СЛУЖЕБНЫЕ ФУНКЦИИ */
 
 // 
-void pushKeys(int key1, int key2 = 0, int key3 = 0, int key4 = 0) {
-  Keyboard.press(key1); delay(20);
-  if (key2 != 0 && key2 != 255) Keyboard.press(key2); delay(20);
-  if (key3 != 0 && key3 != 255) Keyboard.press(key3); delay(20);
-  if (key4 != 0 && key4 != 255) Keyboard.press(key4); delay(20);
-  Keyboard.releaseAll();
+void pushKeys(int key1, int key2 = 0, int key3 = 0) {
+  Keyboard.press(key1); Keyboard.press(key2); Keyboard.press(key3); delay(20); Keyboard.releaseAll();
 }
 
 /*
