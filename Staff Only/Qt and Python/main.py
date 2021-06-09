@@ -122,8 +122,8 @@ def convert_data(data):
 def save_data():
     global name_of_file
     global name_of_file_2
-    memory_file = open(name_of_file, 'w+')
-    mem_file = open(name_of_file_2, 'w+')
+    memory_file = open(name_of_file, 'r+')
+    mem_file = open(name_of_file_2, 'r+')
     progress = 0
     data = [[1, 1,   ui.comboBox.currentText(),     ui.comboBox_2.currentText(),   ui.comboBox_3.currentText()],
             [1, 2,   ui.comboBox_4.currentText(),   ui.comboBox_5.currentText(),   ui.comboBox_6.currentText()],
@@ -287,6 +287,8 @@ def send_data_serial(data_out, mode):
 
 
 def load_data():
+    global name_of_file
+    global name_of_file_2
     memory_file = open(name_of_file, 'r')
     mem_file = open(name_of_file_2, 'r')
     progress = 0
