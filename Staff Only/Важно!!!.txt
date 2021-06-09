@@ -1,0 +1,4 @@
+https://pythonru.com/biblioteki/pyinstaller - компиляция .py в .exe
+
+pyinstaller --onefile -w -i "C:\Users\13211\Desktop\Qt Designer and Python 3.9\Staff Only\Qt and Python\icon.ico" main.py
+cd "c:\users\13211\desktop\qt designer and python 3.9\staff only\qt and python"

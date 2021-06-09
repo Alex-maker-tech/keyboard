@@ -1,0 +1,4 @@
+It's an app that can help you to configure your additional keyboard 
+
+For use this app you must follow manual. Firstly, select a port in Serial Box and press "Open" Button.
+Then, configure Layer's names and necessary shortcuts
