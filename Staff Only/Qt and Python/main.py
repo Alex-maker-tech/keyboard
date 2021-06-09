@@ -103,7 +103,7 @@ dict_of_keys = {"L_Ctrl": 0x80, "R_Ctrl": 0x84, "L_Shift": 0x81, "R_Shift": 0x85
                 "Left_Arrow": 0xD8, "Right_Arrow": 0xD7,  "Up_Arrow": 0xDA, "Down_Arrow": 0xD9, "F1": 0xC2, "F2": 0xC3,  "F3": 0xC4,  "F4": 0xC5, "F5": 0xC6, "F6": 0xC7,
                 "F7": 0xC8,  "F8": 0xC9, "F9": 0xCA, "F10": 0xCB, "F11": 0xCC, "F12": 0xCD}
 for i in range(65, 91):
-    dict_of_keys[str(" " + chr(i))] = i
+    dict_of_keys[str(" " + chr(i))] = i + 32
 for i in range(10):
     dict_of_keys[str(i)] = ord(str(i))
 for i in range(65, 69):
