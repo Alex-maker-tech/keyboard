@@ -120,6 +120,8 @@ def convert_data(data):
 
 
 def save_data():
+    global name_of_file
+    global name_of_file_2
     memory_file = open(name_of_file, 'w+')
     mem_file = open(name_of_file_2, 'w+')
     progress = 0
