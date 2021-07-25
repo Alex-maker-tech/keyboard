@@ -29,47 +29,49 @@ list_of_keys += [str("F" + str(val + 1)) for val in range(12)]
 list_of_keys += [str(i) for i in range(10)]
 list_of_keys += [str(" " + chr(i)) for i in range(65, 91)]
 
+# Список из всех comboBox'ов
+comboBoxes = [ui.comboBox,    ui.comboBox_2,  ui.comboBox_3,  ui.comboBox_4.addItems(list_of_keys),
+              ui.comboBox_5,  ui.comboBox_6,  ui.comboBox_7,  ui.comboBox_8.addItems(list_of_keys),
+              ui.comboBox_9,  ui.comboBox_10, ui.comboBox_11, ui.comboBox_12.addItems(list_of_keys),
+              ui.comboBox_13, ui.comboBox_14, ui.comboBox_15, ui.comboBox_16.addItems(list_of_keys),
+              ui.comboBox_17, ui.comboBox_18, ui.comboBox_19, ui.comboBox_20.addItems(list_of_keys),
+              ui.comboBox_21, ui.comboBox_22, ui.comboBox_23, ui.comboBox_24.addItems(list_of_keys),
+              ui.comboBox_25, ui.comboBox_26, ui.comboBox_27, ui.comboBox_28.addItems(list_of_keys),
+              ui.comboBox_29, ui.comboBox_30, ui.comboBox_31, ui.comboBox_32.addItems(list_of_keys),
+              ui.comboBox_33, ui.comboBox_34, ui.comboBox_35, ui.comboBox_36.addItems(list_of_keys),
+              ui.comboBox_37, ui.comboBox_38, ui.comboBox_39, ui.comboBox_40.addItems(list_of_keys),
+              ui.comboBox_41, ui.comboBox_42, ui.comboBox_43, ui.comboBox_44.addItems(list_of_keys),
+              ui.comboBox_45, ui.comboBox_46, ui.comboBox_47, ui.comboBox_48.addItems(list_of_keys),
+
+              ui.comboBox_49, ui.comboBox_50, ui.comboBox_51, ui.comboBox_52.addItems(list_of_keys),
+              ui.comboBox_53, ui.comboBox_54, ui.comboBox_55, ui.comboBox_56.addItems(list_of_keys),
+              ui.comboBox_57, ui.comboBox_58, ui.comboBox_59, ui.comboBox_60.addItems(list_of_keys),
+              ui.comboBox_61, ui.comboBox_62, ui.comboBox_63, ui.comboBox_64.addItems(list_of_keys),
+              ui.comboBox_65, ui.comboBox_66, ui.comboBox_67, ui.comboBox_68.addItems(list_of_keys),
+              ui.comboBox_69, ui.comboBox_70, ui.comboBox_71, ui.comboBox_72.addItems(list_of_keys),
+              ui.comboBox_73, ui.comboBox_74, ui.comboBox_75, ui.comboBox_76.addItems(list_of_keys),
+              ui.comboBox_77, ui.comboBox_78, ui.comboBox_79, ui.comboBox_80.addItems(list_of_keys),
+              ui.comboBox_81, ui.comboBox_82, ui.comboBox_83, ui.comboBox_84.addItems(list_of_keys),
+              ui.comboBox_85, ui.comboBox_86, ui.comboBox_87, ui.comboBox_88.addItems(list_of_keys),
+              ui.comboBox_89, ui.comboBox_90, ui.comboBox_91, ui.comboBox_92.addItems(list_of_keys),
+              ui.comboBox_93, ui.comboBox_94, ui.comboBox_95, ui.comboBox_96.addItems(list_of_keys),
+
+              ui.comboBox_97, ui.comboBox_98, ui.comboBox_99, ui.comboBox_100.addItems(list_of_keys),
+              ui.comboBox_101, ui.comboBox_102, ui.comboBox_103, ui.comboBox_104.addItems(list_of_keys),
+              ui.comboBox_105, ui.comboBox_106, ui.comboBox_107, ui.comboBox_108.addItems(list_of_keys),
+              ui.comboBox_109, ui.comboBox_110, ui.comboBox_111, ui.comboBox_112.addItems(list_of_keys),
+              ui.comboBox_113, ui.comboBox_114, ui.comboBox_115, ui.comboBox_116.addItems(list_of_keys),
+              ui.comboBox_117, ui.comboBox_118, ui.comboBox_119, ui.comboBox_120.addItems(list_of_keys),
+              ui.comboBox_121, ui.comboBox_122, ui.comboBox_123, ui.comboBox_124.addItems(list_of_keys),
+              ui.comboBox_125, ui.comboBox_126, ui.comboBox_127, ui.comboBox_128.addItems(list_of_keys),
+              ui.comboBox_129, ui.comboBox_130, ui.comboBox_131, ui.comboBox_132.addItems(list_of_keys),
+              ui.comboBox_133, ui.comboBox_134, ui.comboBox_135, ui.comboBox_136.addItems(list_of_keys),
+              ui.comboBox_137, ui.comboBox_138, ui.comboBox_139, ui.comboBox_140.addItems(list_of_keys),
+              ui.comboBox_141, ui.comboBox_142, ui.comboBox_143, ui.comboBox_144.addItems(list_of_keys)]
 
 # Заполнение всех comboBox'ов значениями из list_of_keys
-ui.comboBox.addItems(list_of_keys);    ui.comboBox_2.addItems(list_of_keys);  ui.comboBox_3.addItems(list_of_keys);  ui.comboBox_4.addItems(list_of_keys)
-ui.comboBox_5.addItems(list_of_keys);  ui.comboBox_6.addItems(list_of_keys);  ui.comboBox_7.addItems(list_of_keys);  ui.comboBox_8.addItems(list_of_keys)
-ui.comboBox_9.addItems(list_of_keys);  ui.comboBox_10.addItems(list_of_keys); ui.comboBox_11.addItems(list_of_keys); ui.comboBox_12.addItems(list_of_keys)
-ui.comboBox_13.addItems(list_of_keys); ui.comboBox_14.addItems(list_of_keys); ui.comboBox_15.addItems(list_of_keys); ui.comboBox_16.addItems(list_of_keys)
-ui.comboBox_17.addItems(list_of_keys); ui.comboBox_18.addItems(list_of_keys); ui.comboBox_19.addItems(list_of_keys); ui.comboBox_20.addItems(list_of_keys)
-ui.comboBox_21.addItems(list_of_keys); ui.comboBox_22.addItems(list_of_keys); ui.comboBox_23.addItems(list_of_keys); ui.comboBox_24.addItems(list_of_keys)
-ui.comboBox_25.addItems(list_of_keys); ui.comboBox_26.addItems(list_of_keys); ui.comboBox_27.addItems(list_of_keys); ui.comboBox_28.addItems(list_of_keys)
-ui.comboBox_29.addItems(list_of_keys); ui.comboBox_30.addItems(list_of_keys); ui.comboBox_31.addItems(list_of_keys); ui.comboBox_32.addItems(list_of_keys)
-ui.comboBox_33.addItems(list_of_keys); ui.comboBox_34.addItems(list_of_keys); ui.comboBox_35.addItems(list_of_keys); ui.comboBox_36.addItems(list_of_keys)
-ui.comboBox_37.addItems(list_of_keys); ui.comboBox_38.addItems(list_of_keys); ui.comboBox_39.addItems(list_of_keys); ui.comboBox_40.addItems(list_of_keys)
-ui.comboBox_41.addItems(list_of_keys); ui.comboBox_42.addItems(list_of_keys); ui.comboBox_43.addItems(list_of_keys); ui.comboBox_44.addItems(list_of_keys)
-ui.comboBox_45.addItems(list_of_keys); ui.comboBox_46.addItems(list_of_keys); ui.comboBox_47.addItems(list_of_keys); ui.comboBox_48.addItems(list_of_keys)
-
-ui.comboBox_49.addItems(list_of_keys); ui.comboBox_50.addItems(list_of_keys); ui.comboBox_51.addItems(list_of_keys); ui.comboBox_52.addItems(list_of_keys)
-ui.comboBox_53.addItems(list_of_keys); ui.comboBox_54.addItems(list_of_keys); ui.comboBox_55.addItems(list_of_keys); ui.comboBox_56.addItems(list_of_keys)
-ui.comboBox_57.addItems(list_of_keys); ui.comboBox_58.addItems(list_of_keys); ui.comboBox_59.addItems(list_of_keys); ui.comboBox_60.addItems(list_of_keys)
-ui.comboBox_61.addItems(list_of_keys); ui.comboBox_62.addItems(list_of_keys); ui.comboBox_63.addItems(list_of_keys); ui.comboBox_64.addItems(list_of_keys)
-ui.comboBox_65.addItems(list_of_keys); ui.comboBox_66.addItems(list_of_keys); ui.comboBox_67.addItems(list_of_keys); ui.comboBox_68.addItems(list_of_keys)
-ui.comboBox_69.addItems(list_of_keys); ui.comboBox_70.addItems(list_of_keys); ui.comboBox_71.addItems(list_of_keys); ui.comboBox_72.addItems(list_of_keys)
-ui.comboBox_73.addItems(list_of_keys); ui.comboBox_74.addItems(list_of_keys); ui.comboBox_75.addItems(list_of_keys); ui.comboBox_76.addItems(list_of_keys)
-ui.comboBox_77.addItems(list_of_keys); ui.comboBox_78.addItems(list_of_keys); ui.comboBox_79.addItems(list_of_keys); ui.comboBox_80.addItems(list_of_keys)
-ui.comboBox_81.addItems(list_of_keys); ui.comboBox_82.addItems(list_of_keys); ui.comboBox_83.addItems(list_of_keys); ui.comboBox_84.addItems(list_of_keys)
-ui.comboBox_85.addItems(list_of_keys); ui.comboBox_86.addItems(list_of_keys); ui.comboBox_87.addItems(list_of_keys); ui.comboBox_88.addItems(list_of_keys)
-ui.comboBox_89.addItems(list_of_keys); ui.comboBox_90.addItems(list_of_keys); ui.comboBox_91.addItems(list_of_keys); ui.comboBox_92.addItems(list_of_keys)
-ui.comboBox_93.addItems(list_of_keys); ui.comboBox_94.addItems(list_of_keys); ui.comboBox_95.addItems(list_of_keys); ui.comboBox_96.addItems(list_of_keys)
-
-ui.comboBox_97.addItems(list_of_keys); ui.comboBox_98.addItems(list_of_keys); ui.comboBox_99.addItems(list_of_keys); ui.comboBox_100.addItems(list_of_keys)
-ui.comboBox_101.addItems(list_of_keys); ui.comboBox_102.addItems(list_of_keys); ui.comboBox_103.addItems(list_of_keys); ui.comboBox_104.addItems(list_of_keys)
-ui.comboBox_105.addItems(list_of_keys); ui.comboBox_106.addItems(list_of_keys); ui.comboBox_107.addItems(list_of_keys); ui.comboBox_108.addItems(list_of_keys)
-ui.comboBox_109.addItems(list_of_keys); ui.comboBox_110.addItems(list_of_keys); ui.comboBox_111.addItems(list_of_keys); ui.comboBox_112.addItems(list_of_keys)
-ui.comboBox_113.addItems(list_of_keys); ui.comboBox_114.addItems(list_of_keys); ui.comboBox_115.addItems(list_of_keys); ui.comboBox_116.addItems(list_of_keys)
-ui.comboBox_117.addItems(list_of_keys); ui.comboBox_118.addItems(list_of_keys); ui.comboBox_119.addItems(list_of_keys); ui.comboBox_120.addItems(list_of_keys)
-ui.comboBox_121.addItems(list_of_keys); ui.comboBox_122.addItems(list_of_keys); ui.comboBox_123.addItems(list_of_keys); ui.comboBox_124.addItems(list_of_keys)
-ui.comboBox_125.addItems(list_of_keys); ui.comboBox_126.addItems(list_of_keys); ui.comboBox_127.addItems(list_of_keys); ui.comboBox_128.addItems(list_of_keys)
-ui.comboBox_129.addItems(list_of_keys); ui.comboBox_130.addItems(list_of_keys); ui.comboBox_131.addItems(list_of_keys); ui.comboBox_132.addItems(list_of_keys)
-ui.comboBox_133.addItems(list_of_keys); ui.comboBox_134.addItems(list_of_keys); ui.comboBox_135.addItems(list_of_keys); ui.comboBox_136.addItems(list_of_keys)
-ui.comboBox_137.addItems(list_of_keys); ui.comboBox_138.addItems(list_of_keys); ui.comboBox_139.addItems(list_of_keys); ui.comboBox_140.addItems(list_of_keys)
-ui.comboBox_141.addItems(list_of_keys); ui.comboBox_142.addItems(list_of_keys); ui.comboBox_143.addItems(list_of_keys); ui.comboBox_144.addItems(list_of_keys)
-
+for i in range(len(comboBoxes)):
+    comboBoxes[i].addItems(list_of_keys)
 
 # Функция открытия выбранного COM-порта
 def open_port():
